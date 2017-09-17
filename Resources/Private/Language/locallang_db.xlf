@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-09-12T17:50:31Z" product-name="jn_phpcontentelement">
+		<header/>
+		<body>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent">
+				<source>PHP Content</source>
+			</trans-unit>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent.phpcontent">
+				<source>PHP Content</source>
+			</trans-unit>
+			<trans-unit id="tx_jn_phpcontentelement_phpcelist.name">
+				<source>PHP Content Element</source>
+			</trans-unit>
+			<trans-unit id="tx_jn_phpcontentelement_phpcelist.description">
+				<source>Allows you to add php scripts via frontend plugin.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="de" datatype="plaintext" original="messages" date="2017-09-12T17:50:31Z" product-name="jn_phpcontentelement">
+		<header/>
+		<body>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent">
+				<target>PHP-Inhalt</target>
+			</trans-unit>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_jnphpcontentelement_domain_model_jnphpcontent.phpcontent">
+				<target>PHP-Inhalt</target>
+			</trans-unit>
+			<trans-unit id="tx_jn_phpcontentelement_phpcelist.name">
+				<target>PHP-Inhaltselement</target>
+			</trans-unit>
+			<trans-unit id="tx_jn_phpcontentelement_phpcelist.description">
+				<target>Erlaubt es, PHP-Scripte als Inhaltselemente einzufügen.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

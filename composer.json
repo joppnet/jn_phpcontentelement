@@ -1,0 +1,41 @@
+{
+	"name" : "joppnet/jn_phpcontentelement",
+	"type" : "typo3-cms-extension",
+	"description" : "Allows you to add PHP scripts via frontend plugin.",
+	"keywords": [
+        "TYPO3",
+        "php",
+        "ce",
+        "content"
+    ],
+    "homepage": "https://github.com/joppnet/jn_phpcontentelement",
+    "support": {
+        "issues": "https://github.com/joppnet/jn_phpcontentelement/issues"
+    },
+	"authors" : [
+		{
+            "name": "Oliver Schlöbe",
+            "email": "oli@joppnet.de",
+            "role": "Developer",
+            "homepage": "https://www.joppnet.de"
+        },
+		{
+            "name": "Stefan Riedel",
+            "email": "stefan.riedel@joppnet.de",
+            "role": "Developer",
+            "homepage": "https://www.joppnet.de"
+        }
+	],
+	"license": "GPL-2.0+",
+	"require" : {
+		"typo3/cms-core" : "~8.7"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Joppnet\\JnPhpcontentelement\\" : "Classes"
+		}
+	},
+    "replace": {
+        "jn_phpcontentelement": "self.version"
+    }
+}
