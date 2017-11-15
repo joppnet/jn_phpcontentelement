@@ -5,7 +5,7 @@
 	<f:flashMessages />
 	
 	<f:for each="{jnPHPContents}" as="jnPHPContent">
-		{jnPHPContent.phpcontent}
+		<f:format.raw>{jnPHPContent.phpcontent}</f:format.raw>
 	</f:for>
 </f:section>
 </html>
