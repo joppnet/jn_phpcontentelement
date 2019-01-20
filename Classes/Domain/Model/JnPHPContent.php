@@ -57,7 +57,7 @@ class JnPHPContent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	public function getPhpcontentParsed() {
 		ob_start();
-		eval( '?>' . $this->phpcontent . '<?php ' );
+		eval( '?' . chr(62) . $this->phpcontent . chr(60) . '?php ' );
 		$phpString = PHP_EOL . ob_get_contents() . PHP_EOL;
 		ob_end_clean();
 		return $phpString;
