@@ -13,31 +13,31 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'JnPHPContent' => ''
+                'JnPHPContent' => 'list'
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
-            wizards.newContentElement.wizardItems.plugins {
-                elements {
-                    phpcelist {
-                        iconIdentifier = jn_phpcontentelement-plugin-phpcelist
-                        title = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.name
-                        description = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = jnphpcontentelement_phpcelist
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        phpcelist {
+                            iconIdentifier = jn_phpcontentelement-plugin-phpcelist
+                            title = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.name
+                            description = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = jnphpcontentelement_phpcelist
+                            }
                         }
                     }
+                    show = *
                 }
-                show = *
-            }
-       }'
-    );
+        }'
+        );
+
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
 		$iconRegistry->registerIcon(
 			'jn_phpcontentelement-plugin-phpcelist',
 			\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
