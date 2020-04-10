@@ -8,7 +8,7 @@ Repository: https://github.com/joppnet/jn_phpcontentelement
 
 Please report bugs here: https://github.com/joppnet/jn_phpcontentelement/issues
 
-TYPO3 version: >8.0
+TYPO3 version: >8.7
 
 ## About
 Allows you to add PHP scripts via frontend plugin.
@@ -24,5 +24,5 @@ Allows you to add PHP scripts via frontend plugin.
 <img src="https://www.joppnet.de/typo3conf/ext/jn_phpcontentelement/Resources/Public/Manual/manual-record.png" />
 2. In Page view, add a new plugin content element "[joppnet] PHP Content Element".
 <img src="https://www.joppnet.de/typo3conf/ext/jn_phpcontentelement/Resources/Public/Manual/manual-ce.png" />
-3. Select the page where you created the records in the previous step in the "Record Storage Page" select field.
+3. Select the page where you created the records from the previous step in the "Record Storage Page" select field.
 <img src="https://www.joppnet.de/typo3conf/ext/jn_phpcontentelement/Resources/Public/Manual/manual-record-storage.png" />

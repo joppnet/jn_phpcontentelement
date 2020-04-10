@@ -10,25 +10,25 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => '[joppnet] PHP Content Elements',
-    'description' => 'PHP content elements via frontend plugin.',
-    'category' => 'plugin',
-    'author' => 'Oliver Schlöbe',
-    'author_email' => 'oli@joppnet.de',
-    'author_company' => 'joppnet',
-    'state' => 'stable',
-    'uploadfolder' => false,
-    'createDirs' => '',
-    'clearCacheOnLoad' => 1,
-    'version' => '1.1.0',
-    'constraints' => array(
-        'depends' => array(
-            'typo3' => '8.7.0-10.4.99',
-        ) ,
-        'conflicts' => array() ,
-        'suggests' => array(
-            't3editor' => '8.0.0-0.0.0',
-        ) ,
-    ) ,
-    'clearcacheonload' => true
+	'title' => '[joppnet] PHP Content Elements',
+	'description' => 'PHP content elements via frontend plugin.',
+	'category' => 'plugin',
+	'author' => 'Oliver Schlöbe',
+	'author_email' => 'oli@joppnet.de',
+	'author_company' => 'joppnet',
+	'state' => 'stable',
+	'uploadfolder' => false,
+	'createDirs' => '',
+	'clearCacheOnLoad' => 1,
+	'version' => '1.1.5',
+	'constraints' => array(
+		'depends' => array(
+			'typo3' => '8.7.0-10.9.99',
+		) ,
+		'conflicts' => array() ,
+		'suggests' => array(
+			't3editor' => '8.0.0-0.0.0',
+		) ,
+	) ,
+	'clearcacheonload' => true
 );
