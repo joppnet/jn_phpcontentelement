@@ -8,7 +8,7 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2020 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
@@ -18,12 +18,18 @@ namespace Joppnet\JnPhpcontentelement\Controller;
 class JnPHPContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
-     * jnPHPContentRepository
-     *
      * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository
-     * @inject
      */
-    protected $jnPHPContentRepository = null;
+    protected $jnPHPContentRepository;
+
+    /**
+     * Inject the PHP content repository
+     *
+     * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository $jnPHPContentRepository
+     */
+    public function injectJnPHPContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository $jnPHPContentRepository) {
+        $this->jnPHPContentRepository = $jnPHPContentRepository;
+    }
 
     /**
      * action list
