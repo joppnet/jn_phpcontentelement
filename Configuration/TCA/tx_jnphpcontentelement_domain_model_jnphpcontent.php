@@ -17,7 +17,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'name,phpcontent',
-        'iconfile' => 'EXT:jn_phpcontentelement/ext_icon.png'
+        'iconfile' => 'EXT:jn_phpcontentelement/Resources/Public/Icons/Extension.png'
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, phpcontent',

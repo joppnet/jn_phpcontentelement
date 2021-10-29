@@ -1,8 +1,9 @@
 <?php
+
 /***************************************************************
  * Extension Manager/Repository config file for ext "jn_phpcontentelement".
  *
- * Auto generated 16-02-2020 10:06
+ * Auto generated 29-10-2021 09:39
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -10,25 +11,24 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => '[joppnet] PHP Content Elements',
-	'description' => 'PHP content elements via frontend plugin.',
-	'category' => 'plugin',
-	'author' => 'Oliver Schlöbe',
-	'author_email' => 'oli@joppnet.de',
-	'author_company' => 'joppnet',
-	'state' => 'stable',
-	'uploadfolder' => false,
-	'createDirs' => '',
-	'clearCacheOnLoad' => 1,
-	'version' => '1.1.6',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '8.7.0-10.9.99',
-		) ,
-		'conflicts' => array() ,
-		'suggests' => array(
-			't3editor' => '8.0.0-0.0.0',
-		) ,
-	) ,
-	'clearcacheonload' => true
+    'title' => '[joppnet] PHP Content Elements',
+    'description' => 'PHP content elements via frontend plugin.',
+    'category' => 'plugin',
+    'version' => '1.1.7',
+    'state' => 'stable',
+    'uploadfolder' => false,
+    'clearcacheonload' => true,
+    'author' => 'Oliver Schlöbe',
+    'author_email' => 'oli@joppnet.de',
+    'author_company' => 'joppnet',
+    'constraints' =>
+    array(
+        'depends' => array(
+            'typo3' => '9.5-11.5.99',
+        ),
+        'suggests' => array(
+            't3editor' => '9.0.0-0.0.0',
+        ),
+        'conflicts' => array(),
+    ),
 );

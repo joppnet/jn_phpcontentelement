@@ -8,27 +8,29 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2020 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2021 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
 /**
- * JnPHPContentController
+ * JnPhpContentController
  */
-class JnPHPContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class JnPhpContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
-     * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository
+     * @TYPO3\CMS\Extbase\Annotation\Inject
+     * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository
      */
-    protected $jnPHPContentRepository;
+    protected $jnPhpContentRepository;
 
     /**
      * Inject the PHP content repository
      *
-     * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository $jnPHPContentRepository
+     * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository $jnPhpContentRepository
      */
-    public function injectJnPHPContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPHPContentRepository $jnPHPContentRepository) {
-        $this->jnPHPContentRepository = $jnPHPContentRepository;
+    public function injectJnPhpContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository $jnPhpContentRepository)
+    {
+        $this->jnPhpContentRepository = $jnPhpContentRepository;
     }
 
     /**
@@ -36,8 +38,10 @@ class JnPHPContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      *
      * @return void
      */
-    public function listAction() {
-    	$jnPHPContents = $this->jnPHPContentRepository->findAll();
-        $this->view->assign('jnPHPContents', $jnPHPContents);
+    public function listAction()
+    {
+        // \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->jnPhpContentRepository->findAll());
+        $jnPhpContents = $this->jnPhpContentRepository->findAll();
+        $this->view->assign('jnPhpContents', $jnPhpContents);
     }
 }

@@ -15,7 +15,7 @@ namespace Joppnet\JnPhpcontentelement\Domain\Model;
 /**
  * JnPHPContent
  */
-class JnPHPContent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class JnPhpContent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * name
