@@ -9,7 +9,7 @@ plugin.tx_jnphpcontentelement_phpcelist {
         layoutRootPaths.1 = {$plugin.tx_jnphpcontentelement_phpcelist.view.layoutRootPath}
     }
     persistence {
-        storagePid >
+		#storagePid = {$plugin.tx_jnphpcontentelement_phpcelist.persistence.storagePid}
         #recursive = 1
     }
     features {

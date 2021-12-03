@@ -17,10 +17,13 @@ namespace Joppnet\JnPhpcontentelement\Domain\Repository;
  */
 class JnPhpContentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    public function initializeObject()
-    {
-        /** @var $defaultQuerySettings \TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings */
-        $defaultQuerySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-        $defaultQuerySettings->setRespectStoragePage(true);
-    }
+	public function findAll()
+	{
+		$query = $this->createQuery();
+		$storagePageIds = $query->getQuerySettings()->getStoragePageIds();
+		if (is_array($storagePageIds) && array_search(0, $storagePageIds) !== false) {
+			$query->getQuerySettings()->setStoragePageIds([$GLOBALS['TSFE']->id]);
+		}
+		return $query->execute();
+	}
 }

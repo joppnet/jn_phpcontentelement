@@ -40,7 +40,6 @@ class JnPhpContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function listAction()
     {
-        // \TYPO3\CMS\Core\Utility\DebugUtility::debug($this->jnPhpContentRepository->findAll());
         $jnPhpContents = $this->jnPhpContentRepository->findAll();
         $this->view->assign('jnPhpContents', $jnPhpContents);
     }
