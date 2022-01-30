@@ -39,9 +39,6 @@
 			"Joppnet\\JnPhpcontentelement\\" : "Classes"
 		}
 	},
-	"replace": {
-		"joppnet/jn_phpcontentelement": "self.version"
-	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "jn_phpcontentelement"
