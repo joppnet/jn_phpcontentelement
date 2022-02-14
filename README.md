@@ -8,7 +8,7 @@ Repository: https://github.com/joppnet/jn_phpcontentelement
 
 Please report bugs here: https://github.com/joppnet/jn_phpcontentelement/issues
 
-TYPO3 version: >9.5
+TYPO3 version: >10.4
 
 ## About
 Allows you to add PHP scripts via frontend plugin.
