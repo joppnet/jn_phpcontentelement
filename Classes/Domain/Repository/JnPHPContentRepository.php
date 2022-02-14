@@ -8,14 +8,14 @@ namespace Joppnet\JnPhpcontentelement\Domain\Repository;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2021 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
 /**
- * The repository for JnPHPContents
+ * The repository for JnPhpcontents
  */
-class JnPhpContentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class JnPhpcontentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 	public function findAll()
 	{

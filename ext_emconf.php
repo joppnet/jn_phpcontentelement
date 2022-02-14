@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array(
     'title' => '[joppnet] PHP Content Elements',
     'description' => 'PHP content elements via frontend plugin.',
     'category' => 'plugin',
-    'version' => '1.1.9',
+    'version' => '1.2.0',
     'state' => 'stable',
     'uploadfolder' => false,
     'clearcacheonload' => true,
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' =>
     array(
         'depends' => array(
-            'typo3' => '9.5.0-11.5.99',
+            'typo3' => '10.4.0-11.5.99',
         ),
         'suggests' => array(
             't3editor' => '9.0.0-0.0.0',

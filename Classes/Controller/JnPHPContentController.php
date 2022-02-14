@@ -8,7 +8,7 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2021 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
@@ -17,30 +17,30 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  */
 class JnPhpContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-    /**
-     * @TYPO3\CMS\Extbase\Annotation\Inject
-     * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository
-     */
-    protected $jnPhpContentRepository;
+	/**
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository
+	 */
+	protected $jnPhpContentRepository;
 
-    /**
-     * Inject the PHP content repository
-     *
-     * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository $jnPhpContentRepository
-     */
-    public function injectJnPhpContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpContentRepository $jnPhpContentRepository)
-    {
-        $this->jnPhpContentRepository = $jnPhpContentRepository;
-    }
+	/**
+	 * Inject the PHP content repository
+	 *
+	 * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpContentRepository
+	 */
+	public function injectJnPhpContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpContentRepository)
+	{
+		$this->jnPhpContentRepository = $jnPhpContentRepository;
+	}
 
-    /**
-     * action list
-     *
-     * @return void
-     */
-    public function listAction()
-    {
-        $jnPhpContents = $this->jnPhpContentRepository->findAll();
-        $this->view->assign('jnPhpContents', $jnPhpContents);
-    }
+	/**
+	 * action list
+	 *
+	 * @return void
+	 */
+	public function listAction()
+	{
+		$jnPhpContents = $this->jnPhpContentRepository->findAll();
+		$this->view->assign('jnPhpContents', $jnPhpContents);
+	}
 }
