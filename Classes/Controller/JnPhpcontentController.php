@@ -13,24 +13,24 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  ***/
 
 /**
- * JnPhpContentController
+ * JnPhpcontentController
  */
-class JnPhpContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class JnPhpcontentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 	/**
 	 * @TYPO3\CMS\Extbase\Annotation\Inject
 	 * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository
 	 */
-	protected $jnPhpContentRepository;
+	protected $jnPhpcontentRepository;
 
 	/**
 	 * Inject the PHP content repository
 	 *
-	 * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpContentRepository
+	 * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpcontentRepository
 	 */
-	public function injectJnPhpContentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpContentRepository)
+	public function injectJnPhpcontentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpcontentRepository)
 	{
-		$this->jnPhpContentRepository = $jnPhpContentRepository;
+		$this->jnPhpcontentRepository = $jnPhpcontentRepository;
 	}
 
 	/**
@@ -40,7 +40,7 @@ class JnPhpContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 	 */
 	public function listAction()
 	{
-		$jnPhpContents = $this->jnPhpContentRepository->findAll();
+		$jnPhpContents = $this->jnPhpcontentRepository->findAll();
 		$this->view->assign('jnPhpContents', $jnPhpContents);
 	}
 }
