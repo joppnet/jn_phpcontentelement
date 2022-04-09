@@ -1,5 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/joppnet/jn_phpcontentelement/v/stable.svg)](https://extensions.typo3.org/extension/jn_phpcontentelement/)
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
 [![TYPO3 10](https://img.shields.io/badge/TYPO3-10-orange.svg)](https://get.typo3.org/version/10)
+[![Total Downloads](https://poser.pugx.org/joppnet/jn_phpcontentelement/d/total.svg)](https://packagist.org/packages/joppnet/jn_phpcontentelement)
+[![Monthly Downloads](https://poser.pugx.org/joppnet/jn_phpcontentelement/d/monthly)](https://packagist.org/packages/joppnet/jn_phpcontentelement)
 
 # TYPO3 extension `jn_phpcontentelement`
 
