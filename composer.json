@@ -8,9 +8,9 @@
 		"ce",
 		"content"
 	],
-	"homepage": "https://github.com/joppnet/jn_phpcontentelement",
+	"homepage": "https://extensions.typo3.org/extension/jn_phpcontentelement",
 	"support": {
-		"docs": "https://github.com/joppnet/jn_phpcontentelement",
+		"docs": "https://docs.typo3.org/p/joppnet/jn_phpcontentelement/main/en-us/",
 		"issues": "https://github.com/joppnet/jn_phpcontentelement/issues",
 		"source": "https://github.com/joppnet/jn_phpcontentelement"
 	},
