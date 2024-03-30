@@ -42,9 +42,6 @@
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "jn_phpcontentelement"
-		},
-		"branch-alias": {
-			"dev-master": "v12.x-dev"
 		}
 	}
 }
