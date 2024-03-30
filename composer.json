@@ -1,5 +1,5 @@
 {
-	"name" : "joppnet/jn-phpcontentelement",
+	"name" : "joppnet/jn_phpcontentelement",
 	"type" : "typo3-cms-extension",
 	"description" : "PHP content elements via frontend plugin",
 	"keywords": [
