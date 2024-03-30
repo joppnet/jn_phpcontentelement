@@ -1,21 +1,25 @@
 <?php
-defined('MODE') || die('Access denied.');
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+use Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController;
 
-$boot = static function (): void {
+defined('TYPO3') or die();
+
+(function () {
 	$iconIdentifier = 'jn_phpcontentelement-plugin-phpcelist';
 
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	ExtensionUtility::configurePlugin(
 		'JnPhpcontentelement',
 		'Phpcelist',
 		[
-			\Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController::class => 'list'
+			JnPhpcontentController::class => 'list'
 		],
 		[
-			\Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController::class => 'list'
+			JnPhpcontentController::class => 'list'
 		]
 	);
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+	ExtensionManagementUtility::addPageTSConfig(
 		'mod {
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
@@ -44,7 +48,4 @@ $boot = static function (): void {
 	// 		);
 	// 	}
 	// }
-};
-
-$boot();
-unset($boot);
+})();
