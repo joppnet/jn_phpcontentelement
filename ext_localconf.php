@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('MODE') || die('Access denied.');
 
 $boot = static function (): void {
 	$iconIdentifier = 'jn_phpcontentelement-plugin-phpcelist';
@@ -34,16 +34,16 @@ $boot = static function (): void {
 	}'
 	);
 
-	if (TYPO3_MODE === 'BE') {
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		if (!$iconRegistry->isRegistered($iconIdentifier)) {
-			$iconRegistry->registerIcon(
-				$iconIdentifier,
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-				['source' => 'EXT:jn_phpcontentelement/Resources/Public/Icons/Extension.png']
-			);
-		}
-	}
+	// if (TYPO3_MODE === 'BE') {
+	// 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+	// 	if (!$iconRegistry->isRegistered($iconIdentifier)) {
+	// 		$iconRegistry->registerIcon(
+	// 			$iconIdentifier,
+	// 			\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+	// 			['source' => 'EXT:jn_phpcontentelement/Resources/Public/Icons/Extension.png']
+	// 		);
+	// 	}
+	// }
 };
 
 $boot();
