@@ -1,21 +1,25 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+use Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController;
 
-$boot = static function (): void {
+defined('TYPO3') or die();
+
+(function () {
 	$iconIdentifier = 'jn_phpcontentelement-plugin-phpcelist';
 
-	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	ExtensionUtility::configurePlugin(
 		'JnPhpcontentelement',
 		'Phpcelist',
 		[
-			\Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController::class => 'list'
+			JnPhpcontentController::class => 'list'
 		],
 		[
-			\Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController::class => 'list'
+			JnPhpcontentController::class => 'list'
 		]
 	);
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+	ExtensionManagementUtility::addPageTSConfig(
 		'mod {
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
@@ -34,17 +38,14 @@ $boot = static function (): void {
 	}'
 	);
 
-	if (TYPO3_MODE === 'BE') {
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		if (!$iconRegistry->isRegistered($iconIdentifier)) {
-			$iconRegistry->registerIcon(
-				$iconIdentifier,
-				\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-				['source' => 'EXT:jn_phpcontentelement/Resources/Public/Icons/Extension.png']
-			);
-		}
-	}
-};
-
-$boot();
-unset($boot);
+	// if (TYPO3_MODE === 'BE') {
+	// 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+	// 	if (!$iconRegistry->isRegistered($iconIdentifier)) {
+	// 		$iconRegistry->registerIcon(
+	// 			$iconIdentifier,
+	// 			\TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+	// 			['source' => 'EXT:jn_phpcontentelement/Resources/Public/Icons/Extension.png']
+	// 		);
+	// 	}
+	// }
+})();

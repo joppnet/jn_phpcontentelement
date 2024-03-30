@@ -10,25 +10,25 @@
  * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['jn_phpcontentelement'] = [
     'title' => '[joppnet] PHP Content Elements',
     'description' => 'PHP content elements via frontend plugin.',
     'category' => 'plugin',
-    'version' => '1.2.1',
+    'version' => '1.3.0',
     'state' => 'stable',
     'uploadfolder' => false,
     'clearcacheonload' => true,
     'author' => 'Oliver Schlöbe',
-    'author_email' => 'oli@joppnet.de',
+    'author_email' => 'oschloebe@joppnet.de',
     'author_company' => 'joppnet',
     'constraints' =>
     array(
         'depends' => array(
-            'typo3' => '10.4.0-11.5.99',
+            'typo3' => '12.0.0-12.4.99',
         ),
         'suggests' => array(
             't3editor' => '9.0.0-0.0.0',
         ),
         'conflicts' => array(),
     ),
-);
+];
