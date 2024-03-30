@@ -8,7 +8,7 @@ namespace Joppnet\JnPhpcontentelement\Domain\Repository;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022-2024 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 

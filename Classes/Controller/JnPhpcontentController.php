@@ -1,6 +1,9 @@
 <?php
 namespace Joppnet\JnPhpcontentelement\Controller;
 
+use Psr\Http\Message\ResponseInterface;
+use Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository;
+
 /***
  *
  * This file is part of the "[joppnet] Page PHP Content Element" Extension for TYPO3 CMS.
@@ -8,7 +11,7 @@ namespace Joppnet\JnPhpcontentelement\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022-2024 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
@@ -18,17 +21,16 @@ namespace Joppnet\JnPhpcontentelement\Controller;
 class JnPhpcontentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 	/**
-	 * @TYPO3\CMS\Extbase\Annotation\Inject
-	 * @var \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository
+	 * @var JnPhpcontentRepository
 	 */
 	protected $jnPhpcontentRepository;
 
 	/**
 	 * Inject the PHP content repository
 	 *
-	 * @param \Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpcontentRepository
+	 * @param JnPhpcontentRepository $jnPhpcontentRepository
 	 */
-	public function injectJnPhpcontentRepository(\Joppnet\JnPhpcontentelement\Domain\Repository\JnPhpcontentRepository $jnPhpcontentRepository)
+	public function injectJnPhpcontentRepository(JnPhpcontentRepository $jnPhpcontentRepository)
 	{
 		$this->jnPhpcontentRepository = $jnPhpcontentRepository;
 	}
@@ -36,11 +38,13 @@ class JnPhpcontentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 	/**
 	 * action list
 	 *
-	 * @return void
+	 * @return ResponseInterface
 	 */
-	public function listAction()
+	public function listAction(): ResponseInterface
 	{
 		$jnPhpContents = $this->jnPhpcontentRepository->findAll();
 		$this->view->assign('jnPhpContents', $jnPhpContents);
+
+		return $this->htmlResponse();
 	}
 }

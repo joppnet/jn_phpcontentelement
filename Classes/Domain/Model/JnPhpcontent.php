@@ -8,7 +8,7 @@ namespace Joppnet\JnPhpcontentelement\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022-2024 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
@@ -22,21 +22,21 @@ class JnPhpcontent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 *
 	 * @var string
 	 */
-	protected $name = '';
+	protected string $name = '';
 
 	/**
 	 * phpcontent
 	 *
 	 * @var string
 	 */
-	protected $phpcontent = '';
+	protected string $phpcontent = '';
 
 	/**
 	 * Returns the name
 	 *
 	 * @return string $name
 	 */
-	public function getName()
+	public function getName(): string
 	{
 		return $this->name;
 	}
@@ -47,7 +47,7 @@ class JnPhpcontent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @param string $name
 	 * @return void
 	 */
-	public function setName($name)
+	public function setName($name): void
 	{
 		$this->name = $name;
 	}
@@ -57,7 +57,7 @@ class JnPhpcontent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 *
 	 * @return string $outputString
 	 */
-	public function getPhpcontentParsed()
+	public function getPhpcontentParsed(): string
 	{
 		ob_start();
 		eval('?' . chr(62) . $this->phpcontent . chr(60) . '?php ');
@@ -71,7 +71,7 @@ class JnPhpcontent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 *
 	 * @return string $phpcontent
 	 */
-	public function getPhpcontent()
+	public function getPhpcontent(): string
 	{
 		return $this->getPhpcontentParsed();
 		#return $this->phpcontent;
@@ -83,7 +83,7 @@ class JnPhpcontent extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @param string $phpcontent
 	 * @return void
 	 */
-	public function setPhpcontent($phpcontent)
+	public function setPhpcontent($phpcontent): void
 	{
 		$this->phpcontent = $phpcontent;
 	}
