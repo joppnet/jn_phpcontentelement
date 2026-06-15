@@ -7,8 +7,7 @@ mod {
                     title = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.name
                     description = LLL:EXT:jn_phpcontentelement/Resources/Private/Language/locallang_db.xlf:tx_jn_phpcontentelement_phpcelist.description
                     tt_content_defValues {
-                        CType = list
-                        list_type = jnphpcontentelement_phpcelist
+                        CType = jnphpcontentelement_phpcelist
                     }
                 }
             }

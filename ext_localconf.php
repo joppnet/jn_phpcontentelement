@@ -1,6 +1,5 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use Joppnet\JnPhpcontentelement\Controller\JnPhpcontentController;
 
@@ -16,7 +15,8 @@ $boot = static function (): void {
 		],
 		[
 			JnPhpcontentController::class => 'list'
-		]
+		],
+		ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 	);
 
 };

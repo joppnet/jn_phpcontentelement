@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Joppnet\JnPhpcontentelement\Domain\Repository;
 
 /***
@@ -8,7 +11,7 @@ namespace Joppnet\JnPhpcontentelement\Domain\Repository;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022-2024 Oliver Schlöbe <oli@joppnet.de>, joppnet
+ *  (c) 2022-2026 Oliver Schlöbe <oli@joppnet.de>, joppnet
  *
  ***/
 
@@ -17,6 +20,10 @@ namespace Joppnet\JnPhpcontentelement\Domain\Repository;
  */
 class JnPhpcontentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+	protected $defaultOrderings = [
+		'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+	];
+
 	public function findAll()
 	{
 		$query = $this->createQuery();

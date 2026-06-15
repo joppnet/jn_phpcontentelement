@@ -23,3 +23,20 @@ plugin.tx_jnphpcontentelement_phpcelist {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
+
+/**
+ * Render the PHP Content Element CType using the Extbase plugin
+ * This replaces the deprecated list_type rendering
+ */
+tt_content.jnphpcontentelement_phpcelist =< lib.contentElement
+tt_content.jnphpcontentelement_phpcelist {
+    #templateName = JnPhpcontent/List
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    dataProcessing.10 {
+        table = tx_jnphpcontentelement_domain_model_jnphpcontent
+        pidInList.field = pages
+        recursive.field = recursive
+        orderBy = sorting
+        as = jnPhpContents
+    }
+}

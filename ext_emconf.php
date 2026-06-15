@@ -12,7 +12,7 @@ $EM_CONF['jn_phpcontentelement'] = [
   'title' => '[joppnet] PHP Content Element',
   'description' => 'PHP content elements via frontend plugin.',
   'category' => 'plugin',
-  'version' => '1.3.8',
+  'version' => '1.4.0',
   'state' => 'stable',
   'uploadfolder' => false,
   'clearcacheonload' => true,
@@ -21,7 +21,7 @@ $EM_CONF['jn_phpcontentelement'] = [
   'author_company' => 'joppnet',
   'constraints' => [
     'depends' => [
-      'typo3' => '12.0.0-14.4.99',
+      'typo3' => '13.4.0-14.4.99',
     ],
     'suggests' => [
       't3editor' => '9.0.0-0.0.0',
